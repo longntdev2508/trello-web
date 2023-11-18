@@ -1,0 +1,81 @@
+- Env:
+  + Cai dat nvm, node, git, yarn, (zsh)
+
+- Code base:
+  + Tao project = yarn + vite
+  + Chon js/ts SWC
+
+- Git
+  + init --> remote --> add --> commit --> push
+  + Khi thay doi code thi phai tao branch moi de thuc hien (ko thay doi truc tiep tren master)
+ 
+- package.json file
+  + Sua script --> build => "vite build --base=./" (./: tao duong dan trong code)
+  + Optional: sua file vite.config.js: defineConfig --> base: './'
+
+- Eslint:
+  + Cai extension eslint trong vscode
+  + .eslintrc.cjs --> rule: {...}
+		  --> env: {...}
+
+- Cai dat them:
+  + Material UI (MUI), font, import rule MUI vao eslint
+
+- CssBaseLine (trong MUI): dong bo css giua cac browser
+  + Import CssBaseLine va xoa index.css file
+
+- Theming:
+  + Tao file theme.js cung cap voi main.jsx
+  + Tao va export bien theme = createTheme({...})
+  + <ThemeProvider theme={theme}>...</ThemeProvider>
+
+- Light/Dark mode (optional)
+  + Thay ThemeProvider = CssVarsProvider
+  + Thay createTheme = extendTheme
+  + Su dung hook useColorScheme() de luu mode vao localStorage
+
+- System light/dark mode
+  + Su dung 'system'
+
+- Khac nhau giua style va sx
+  + <div style={{...}}>...</div> --> style inline
+  + <Box sx={{...}}>...</Box> --> tao <style>...</style> va <div>...</div>
+    --> dong bo cac trinh duyet
+
+- SX prop, Styled API, Theme override
+  + SX prop --> su dung rieng cho tung component
+  + Styled API --> su dung chung cho nhieu component
+  + Theme override --> ghi de len tat ca component
+
+- Cau truc thu muc:
+  + components: chua cac component duoc su dung lai
+    . ComponentA --> index.jsx
+    . ComponentB --> index.jsx
+      ...
+  + pages: chua cac trang cho web
+    . PageA --> index.jsx
+            --> _id.jsx (co the co hoac ko)
+    . PageB --> index.jsx  
+            --> _id.jsx (co the co hoac ko)
+      ...
+  + redux: store management state
+  + utils: chua cac bien tinh co dinh
+    . constanst.js, sorts.js, ...
+  + App.jsx
+  + main.jsx
+  + theme.js
+
+- Relative path va Absolute path
+  + Cau hinh file vite.config.js: defineConfig 
+				  --> resolve: {
+					alias: [{ find: '~', replacement: '/src'}]
+					       }
+  + Cau hinh file jsconfig.json: {
+				   "compilerOptions": {
+				     "paths": {
+				       "~/*": ["./src/*"]
+				     }
+				   }
+				 }
+  + Nam khac cap thi nen dung Abolute path (~/components/ComponentA)
+  + Nam cung cap thi nen dung Relative path (./ComponentA)
