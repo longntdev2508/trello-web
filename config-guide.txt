@@ -79,3 +79,11 @@
 				 }
   + Nam khac cap thi nen dung Abolute path (~/components/ComponentA)
   + Nam cung cap thi nen dung Relative path (./ComponentA)
+
+- Su dung svg icon
+  + Cai dat thu vien vite-plugin-svgr@^<version>
+  + Cau hinh trong file vite.config.js:
+    . Import svgr
+    . defineConfig
+      --> plugins: [..., svgr()]
+    . Vao trang MaterialUI --> xem cach dung Icon --> SvgIcon
