@@ -87,3 +87,12 @@
     . defineConfig
       --> plugins: [..., svgr()]
     . Vao trang MaterialUI --> xem cach dung Icon --> SvgIcon
+
+- Custom theme (trong file theme.js)
+  + Vao trang mui.com --> customization/theme-components
+
+- Responsive Appbar
+  + Vao trang mui.com --> Appbar / Drawer / Breakpoints
+  + Custom scroll bar: 
+    . Custom bang CssBaseLine --> dung MuiCssBaseLine va 'body' thay cho 'root'
+    .w3school --> custom scroll bar (*::-webkit-scrollbar...)
