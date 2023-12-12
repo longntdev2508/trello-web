@@ -13,7 +13,12 @@ const ModeSelect = () => {
   return (
     <div>
       <FormControl size='small' sx={{ minWidth: 120 }}>
-        <InputLabel id='demo-simple-select-autowidth-label'>Mode</InputLabel>
+        <InputLabel
+          id='demo-simple-select-autowidth-label'
+          sx={{ color: 'white', '&.Mui-focused': { color: 'white' } }}
+        >
+          Mode
+        </InputLabel>
         <Select
           labelId='demo-simple-select-autowidth-label'
           id='demo-simple-select-autowidth'
@@ -21,6 +26,17 @@ const ModeSelect = () => {
           onChange={(e) => setMode(e.target.value)}
           autoWidth
           label='Mode'
+          sx={{
+            color: 'white',
+            '.MuiOutlinedInput-notchedOutline': { borderColor: 'white' },
+            '&:hover .MuiOutlinedInput-notchedOutline': {
+              borderColor: 'white'
+            },
+            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+              borderColor: 'white'
+            },
+            '.MuiSvgIcon-root': { color: 'white' }
+          }}
         >
           <MenuItem value='light'>
             <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
