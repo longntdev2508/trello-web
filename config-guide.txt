@@ -91,6 +91,14 @@
 - Custom theme (trong file theme.js)
   + Vao trang mui.com --> customization/theme-components
 
+- Custom icon
+  + Inspect vao Icon tren web 
+  + Lay class="...-root" (dau tien)
+  + sx={{..., 
+        '& .MuiSvgIcon-root: {...}'
+        }}
+  (&: cha cua .MuiSvgIcon-root)
+
 - Responsive Appbar
   + Vao trang mui.com --> Appbar / Drawer / Breakpoints
   + Custom scroll bar: 
