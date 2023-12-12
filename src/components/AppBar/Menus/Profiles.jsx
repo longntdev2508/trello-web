@@ -11,6 +11,9 @@ import PersonAdd from '@mui/icons-material/PersonAdd'
 import Settings from '@mui/icons-material/Settings'
 import Logout from '@mui/icons-material/Logout'
 
+const AVATAR_LINK =
+  'https://scontent.fsgn5-13.fna.fbcdn.net/v/t39.30808-6/393732324_1978467629175137_3569439556806809371_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=s4Q65-J3HwkAX9DyGZJ&_nc_ht=scontent.fsgn5-13.fna&oh=00_AfCH14xhCqixc2VNXzOgrOnS_900PK8aV8sRrvK460SGyw&oe=65791A95'
+
 function Profiles() {
   const [anchorEl, setAnchorEl] = React.useState(null)
   const open = Boolean(anchorEl)
@@ -35,10 +38,8 @@ function Profiles() {
           <Avatar
             sx={{ width: 32, height: 32 }}
             alt='avatar'
-            src='https://scontent.fsgn5-13.fna.fbcdn.net/v/t39.30808-6/393732324_1978467629175137_3569439556806809371_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=5f2048&_nc_ohc=PojMG7RRHwwAX_MPj7Z&_nc_ht=scontent.fsgn5-13.fna&oh=00_AfBZMElBODI4IroYzd8VAV8YlUkfl62L7R0UyhiE4QzGIQ&oe=655F6555'
-          >
-            M
-          </Avatar>
+            src={AVATAR_LINK}
+          ></Avatar>
         </IconButton>
       </Tooltip>
       <Menu

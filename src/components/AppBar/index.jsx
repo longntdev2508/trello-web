@@ -9,6 +9,7 @@ import Tooltip from '@mui/material/Tooltip'
 import AppsIcon from '@mui/icons-material/Apps'
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone'
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline'
+import AddIcon from '@mui/icons-material/Add'
 import ModeSelect from '../ModeSelect'
 import Workspaces from './Menus/Workspaces'
 import Recent from './Menus/Recent'
@@ -26,9 +27,9 @@ const AppBar = () => {
         alignItems: 'center',
         justifyContent: 'space-between',
         gap: 2,
+        px: 2,
         overflowX: 'auto'
       }}
-      px={2}
     >
       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
         <AppsIcon sx={{ color: 'primary.main' }} />
@@ -51,7 +52,9 @@ const AppBar = () => {
           <Recent />
           <Starred />
           <Templates />
-          <Button variant='outlined'>Create</Button>
+          <Button variant='outlined' endIcon={<AddIcon />}>
+            Create
+          </Button>
         </Box>
       </Box>
 
